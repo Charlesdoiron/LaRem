@@ -131,6 +131,13 @@ h2 {
 }
 
 /*INPUTS*/
+input.form-control.col-md-12 {
+    color: #888888;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 100;
+    padding-left: 20px;
+}
 
 input.form-control.col-md-12::placeholder {
     color: #888888;
@@ -322,7 +329,10 @@ label {
 .cta {
     display: flex;
     justify-content: center;
+     border-bottom: 1px solid #ddd;
+    padding: 100px;
     .btn {
+
         border-radius: 3px;
         background-color: #005be2;
         padding: 15px 30px;
@@ -336,6 +346,7 @@ label {
 
 /*SLOGAN*/
 .slogan {
+  padding: 100px 0;
     text-align: center;
     font-family: "Gill Sans Bold";
     margin: 0 auto;
