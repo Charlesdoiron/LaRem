@@ -1,0 +1,70 @@
+/*----- Length ------*/
+
+$grid-gutter-width: 0;
+$navbar-height: 10vh;
+$recap-card-height: 320px;
+$chap1-carousel-pic-display-width: 83vw;
+$chap1-carousel-pic-display-max-width: 520px;
+$bio-boss-pic-diameter: 200px;
+$recap-card-max-width: 310px;
+$chap-number-card-height: $recap-card-height;
+$chap-classic-pic-height: 450px;
+$chap-6-pic-width: 80vw;
+$chap-6-pic-height: $chap-6-pic-width / 2;
+$chap-6-persons-offset: 0.15 * $chap-6-pic-height;
+$chap-6-persons-arrow: 15px;
+$chap6-challenger-height: 400px;
+
+/* --- Colors --- */
+$black-russian: #121113;
+$dark-grey: rgba(83,83,83,1.00);
+$middle-grey: rgba(117,114,114,1.00);
+$light-grey: lighten($middle-grey, 30%);
+$main-color: rgba(255,166,88,1.00);
+$secondary-color: rgba(228,44,47,1.00);
+$third-color : #F46F70;
+$white: rgba(255,255,255,1.00);
+$h1-color: $main-color;
+$h2-color: $dark-grey;
+$h3-color: $main-color;
+$chapter-text-content: $dark-grey;
+$body-background-color-dev: rgba(213,213,213,1.00);
+$body-background-color: rgba(250,250,250,1.00);
+$chap-text-carousel-color: rgba(117,114,114,1.00);
+
+/* --- Fonts --- */
+
+$recap-picture-font-size: 10rem;
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/museo/Museo700-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/Museo700-Regular-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/museo/Museo500-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/Museo500-Regular-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Museo';
+    src: url('../fonts/museo/Museo300-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/museo/Museo300-Regular-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* --- Mixins --- */
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+

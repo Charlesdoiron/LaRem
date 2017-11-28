@@ -1,0 +1,32 @@
+/* ----- HTML Elements -------*/
+
+
+/*------- Chapters - Global ------*/
+
+.chap-title {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  //align-item made in DOMStyli
+
+  > * {
+    // max-width: 75%;
+  }
+}
+
+.chap-banner {
+  height: 330px;
+  background-image: url('https://picsum.photos/1000/600/?random');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.chap-banner-description {
+  margin-top: -60px;
+  background-color: $white;
+  > * {
+    color: $main-color;
+  }
+}
+

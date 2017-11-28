@@ -1,0 +1,28 @@
+
+/*------- Chapter 3 ------*/
+
+.chap-classic-pic-desc {
+  display: flex;
+  flex-direction: row-reverse;
+
+  align-items: center;
+  align-content: center;
+
+  &:nth-of-type(2n) {
+    flex-direction: row;
+    background-color: $white;
+  }
+}
+
+.chap-classic-pic {
+  height: $chap-classic-pic-height;
+  overflow: hidden;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.chap-classic-desc {
+  line-height: 50px;
+}

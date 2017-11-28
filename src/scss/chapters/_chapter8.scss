@@ -1,0 +1,101 @@
+
+
+/*------- Chapter 8 ------*/
+
+
+.chap-persons-2 {
+  margin: 0;
+  display: flex;
+
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.chap-person-2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chap-person-2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  background-color: $white;
+
+}
+
+.person-2-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.person-2-parameters {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.person-2-name {
+  font-weight: 500;
+  font-size: 1.25em;;
+  color: $middle-grey;
+}
+
+.person-2-job-title {
+  color: $light-grey;
+}
+
+.person-2-picture {
+  text-align: center;
+  > img {
+    border-radius: 50%;
+  }
+}
+
+.person-2-description{
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+
+  > p {
+    font-size: 0.8rem;
+    padding-right: map-get($spacers, 1);
+    padding-left: map-get($spacers, 1);
+    color: $light-grey;
+  }
+
+  &:before {
+
+  }
+}
+
+.svg-guillemet {
+
+  > svg {
+    height: 25px;
+    margin: map-get($spacers, 4) 0;
+    > * {
+      fill: $light-grey;
+    }
+  }
+
+  &.guillemet-in {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.guillemet-out {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,73 @@
+.bio {
+  margin-top: -$bio-boss-pic-diameter / 2;
+}
+
+.bio-boss-picture {
+  display: flex;
+
+
+  justify-content: center;
+  > img {
+    border-radius: 50%;
+    width: $bio-boss-pic-diameter;
+    height: $bio-boss-pic-diameter;
+  }
+}
+
+.bio-whoiswho {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+   @media (min-width: map-get($grid-breakpoints, sm)) {
+    margin-top: -20px;
+  }
+
+  > span {
+    display: block;
+  }
+}
+
+.bio-boss-name {
+  color: $main-color;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.bio-boss-job-title {
+  font-style: italic;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.guillemet {
+  display: flex;
+
+  > svg {
+    height: 50px;
+    > * {
+      fill: $main-color;
+    }
+  }
+
+  &.guillemet-debut {
+    justify-content: flex-start;
+  }
+
+  &.guillemet-fin {
+    justify-content: flex-end;
+  }
+}
+
+.bio-content {
+  display: flex;
+  justify-content: space-around;
+  font-style: italic;
+}
+
+.bio-content-first-part {
+}
+
+.bio-content-second-part {
+}

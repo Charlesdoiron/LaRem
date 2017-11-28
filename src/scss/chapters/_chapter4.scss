@@ -1,0 +1,15 @@
+
+/*------- Chapter 4 ------*/
+
+.chap4-pic-container {
+  display: flex;
+
+  justify-content: center;
+
+  .chap-pic {
+    height: $chap-6-pic-height;
+    background-image: url('https://picsum.photos/1300/280/?random');
+    background-size: cover;
+
+  }
+}

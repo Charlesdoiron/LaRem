@@ -1,0 +1,511 @@
+/* ----- HTML Elements -------*/
+
+
+/*------- Chapters - Global ------*/
+
+.chap-title {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  //align-item made in DOMStyli
+
+  > * {
+    // max-width: 75%;
+  }
+}
+
+.chap-banner {
+  height: 330px;
+  background-image: url('https://picsum.photos/1000/600/?random');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.chap-banner-description {
+  margin-top: -60px;
+  background-color: $white;
+  > * {
+    color: $main-color;
+  }
+}
+
+/*------- Chapter 2 ------*/
+
+.chap-2 {
+  > .chap-title, .chap-text-content {
+    background-color: $white;
+  }
+
+  > .chap-numbers {
+    display: flex;
+
+    justify-content: space-between;
+    //align-items: center;
+    //align-content: center;
+
+
+    >.chap-number-card {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: center;
+      //align-content: center;
+
+      // height: $chap-number-card-height;
+      // min-width: $chap-number-card-height / 2;
+      // max-width: $chap-number-card-height;
+
+      background-color: $white;
+
+      > .chap-number-number {
+        height: $chap-number-card-height *2 / 3;
+        font-family: 'Museo 700';
+        font-size: 200px;
+        // line-height: 200px;
+        font-weight: 500;
+        color: $main-color;
+      }
+
+      > .chap-number-description {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/*------- Chapter 3 ------*/
+
+.chap-classic-pic-desc {
+  display: flex;
+  flex-direction: row-reverse;
+
+  //justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  &:nth-of-type(2n) {
+    flex-direction: row;
+    background-color: $white;
+  }
+}
+
+.chap-classic-pic {
+  height: $chap-classic-pic-height;
+  overflow: hidden;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.chap-classic-desc {
+  line-height: 50px;
+}
+
+/*------- Chapter 4 ------*/
+
+.chap4-pic-container {
+  display: flex;
+
+  justify-content: center;
+
+  .chap-pic {
+    height: $chap-6-pic-height;
+    background-image: url('https://picsum.photos/1300/280/?random');
+    background-size: cover;
+
+  }
+}
+
+/*------- Chapter 5 ------*/
+
+.chap-5 {
+  background-color: $white;
+}
+
+.chap-text-carousel-title {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100vw;
+  color: $middle-grey;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.chap-text-carousel-container {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  // align-content: center;
+
+  &:before {
+    content: '‹';
+    font-size: 7em;
+    font-weight: 100;
+  }
+
+  &:after {
+    content: '›';
+    font-size: 7em;
+    font-weight: 100;
+  }
+}
+
+.chap-text-carousel-text {
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  // align-content: center;
+
+  > span {
+    color: $middle-grey;
+    font-size: 4em;
+    font-weight: 500;
+  }
+
+  > p {
+    width: 50%;
+    color: $light-grey;
+    text-align: center;
+  }
+}
+
+/*------- Chapter 6 ------*/
+
+.chap-6 {
+  > .chap-text-content {
+    padding-bottom: $chap-6-pic-height * 2 / 3;
+  }
+}
+
+.chap6-pic-container {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  height: $chap-6-pic-height;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: $white;
+
+  > .chap-pic {
+
+    height: $chap-6-pic-height;
+    position: absolute;
+    top: -$chap-6-pic-height / 3;
+
+    background-image: url('https://picsum.photos/1300/280/?random');
+    background-size: cover;
+
+  }
+}
+
+.chap-persons {
+  position: absolute;
+  top: $chap-6-pic-height * 2 / 3 - $chap-6-persons-offset;
+  margin: 0;
+  display: flex;
+
+  justify-content: space-around;
+
+  z-index: 10;
+}
+
+.chap-person-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chap-person-arrow-top {
+  border-left: $chap-6-persons-arrow solid transparent;
+  border-right: $chap-6-persons-arrow solid transparent;
+  border-bottom: $chap-6-persons-arrow solid $white;
+  width: 0;
+}
+
+.chap-person {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  background-color: $white;
+}
+
+.person-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.person-parameters {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.person-name {
+  font-weight: 500;
+}
+
+.person-job-title {
+  color: $secondary-color;
+}
+
+.person-picture > img {
+  border-radius: 50%;
+}
+
+.person-description{
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  > p {
+    font-size: 0.8rem;
+    padding-right: map-get($spacers, 1);
+    padding-left: map-get($spacers, 1);
+  }
+}
+
+.chap-more-infos-container {
+  background-color: $white;
+
+  > .sub1 {
+    text-align: center;
+  }
+
+  > .sub2 {
+    display: flex;
+    justify-content: space-between;
+
+    > .sub-sub2 {
+      text-align: right;
+
+    }
+  }
+}
+
+.more-infos-sub-sub > a {
+  color: $secondary-color;
+}
+
+.challengers-prez-picture {
+  height: $chap-6-pic-height;
+  background-image: url('https://picsum.photos/1300/280/?random');
+  background-size: cover;
+
+  font-family: 'Museo';
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1em;
+
+  padding-right: map-get($spacers, 2);
+  padding-left: map-get($spacers, 2);
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-right: map-get($spacers, 5);
+    padding-left: map-get($spacers, 5);
+    font-size: 4.5em;
+  }
+}
+
+.challengers-prez-desc {
+  margin-top: -$chap-6-persons-offset;
+  background-color: $white;
+  > p {
+    color: $light-grey;
+  }
+}
+
+.chap-6-challengers {
+  display: flex;
+  justify-content: space-around;
+  //align-items: center;
+  //align-content: center;
+}
+
+.challenger {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: map-get($spacers, 4);
+  height: $chap6-challenger-height;
+  padding: 0;
+  background-color: $white;
+}
+
+.challenger-pic {
+  height: $chap6-challenger-height * 3 / 4;
+  background-image: url('https://picsum.photos/600/300/?random');
+  background-size: cover;
+}
+
+.challenger-headers {
+  display: flex;
+  flex-grow: 1;
+
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.challenger-name {
+  padding-left: map-get($spacers, 3);
+  padding-right: map-get($spacers, 5);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.challenger-location {
+  flex: 1;
+  padding-right: map-get($spacers, 3);
+  text-align: right;
+  padding-left: 0;
+  margin: 0;
+
+  :first-child {
+    display: inline-block;
+    color: $light-grey;
+  }
+
+  :last-child {
+    display: inline-block;
+    padding: 0;
+    text-align: right;
+    font-size: 0.75em;
+    line-height: 1em;
+    text-transform: uppercase;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      padding: 0;
+    }
+
+  }
+}
+
+/*------- Chapter 7 ------*/
+
+.chap-crazy-pic {
+  padding: 0;
+  margin: 0;
+  height: 100vw;
+  background-image: url('https://picsum.photos/600/300/?random');
+  background-size: cover;
+}
+
+/*------- Chapter 8 ------*/
+
+
+.chap-persons-2 {
+  margin: 0;
+  display: flex;
+
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.chap-person-2-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chap-person-2 {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  background-color: $white;
+
+}
+
+.person-2-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.person-2-parameters {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.person-2-name {
+  font-weight: 500;
+  font-size: 1.25em;;
+  color: $middle-grey;
+}
+
+.person-2-job-title {
+  color: $light-grey;
+}
+
+.person-2-picture {
+  text-align: center;
+  > img {
+    border-radius: 50%;
+  }
+}
+
+.person-2-description{
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+
+  > p {
+    font-size: 0.8rem;
+    padding-right: map-get($spacers, 1);
+    padding-left: map-get($spacers, 1);
+    color: $light-grey;
+  }
+
+  &:before {
+
+  }
+}
+
+.svg-guillemet {
+
+  > svg {
+    height: 25px;
+    margin: map-get($spacers, 4) 0;
+    > * {
+      fill: $light-grey;
+    }
+  }
+
+  &.guillemet-in {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &.guillemet-out {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  // border: 1px solid #000;
+}
+
+
+
+body {
+  background-color: $body-background-color;
+  font-family: 'Lato';
+}
+
+h1 {
+  color: $h1-color;
+  font-family: 'Museo';
+  font-size: 2.5em;
+  line-height: 1em;
+  font-weight: 500;
+  padding-right: map-get($spacers, 2);
+  padding-left: map-get($spacers, 2);
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-right: map-get($spacers, 5);
+    padding-left: map-get($spacers, 5);
+    font-size: 4em;
+  }
+}
+
+h2 {
+  font-size: 1.5em;
+  font-family:'Lato';
+  font-weight: 400;
+  line-height: 1em;
+  color: $h2-color;
+
+  padding-right: map-get($spacers, 2);
+  padding-left: map-get($spacers, 2);
+
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-right: map-get($spacers, 5);
+    padding-left: map-get($spacers, 5);
+    font-size: 2.5em;
+  }
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+  color: $chapter-text-content;
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 300;
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+   padding-right: map-get($spacers, 5);
+   padding-left: map-get($spacers, 5);
+   font-size: 1.5em;
+ }
+}
+
+h3 {
+  color: $h3-color;
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+   padding-right: map-get($spacers, 5);
+   padding-left: map-get($spacers, 5);
+   font-size: 1.5em;
+ }
+}
+
+h5 {
+  font-family: 'Lato';
+  font-weight: 600;
+  font-size: 1em;
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+   padding-right: map-get($spacers, 5);
+   padding-left: map-get($spacers, 5);
+   font-size: 1.5em;
+ }
+}
+
+
+/*UTILITIES*/
+
+.appear{
+  transition: all 3s;
+  opacity: 1 !important;
+  transition-duration: 3s;
+  transition-delay: 4s;
+}
+.voletAnim1{
+  transition: all 2s;
+  transition-duration: 2s;
+  background-color: $white !important;
+}
+.voletAnim2{
+  transform: translateY(-100%);
+  transition: all 1s;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+
+}
+
+
+.toOrigin{
+  transition: all 3s;
+  transform: translateX(0%) !important;
+  transition-duration: 3s;
+  opacity: 1 !important;
+  transition-delay: 4s;
+}

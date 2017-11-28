@@ -1,0 +1,66 @@
+.recap {
+    background-color: $white;
+    padding-bottom: 160px;
+}
+
+.recap>.row {
+    display: flex;
+
+    justify-content: space-around;
+}
+
+.changeHeight{
+  height: 320px !important;
+  transition: all 1s;
+}
+
+.recap-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: center;
+    max-width: $recap-card-max-width;
+    /*  height: $recap-card-height;*/
+    height: 120px;
+    transition: all 1s;
+   transform: translateY(0);
+}
+.recap-card:hover{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all 1s;
+    transform: translateY(-4px);
+    .recap-title{
+      color:$third-color;
+      transition: all 1s;
+    }
+}
+
+.recap-picture {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+    color: $main-color;
+
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-size: $recap-picture-font-size;
+}
+
+.recap-title {
+  transition: all 1s;
+    height: 120px;
+    background-color: $body-background-color;
+    color: $chapter-text-content;
+    font-family: 'Lato';
+    font-size: 1.25em;
+    font-weight: 300;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        font-size: 1.5em;
+    }
+}

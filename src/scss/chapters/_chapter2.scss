@@ -1,0 +1,35 @@
+/*------- Chapter 2 ------*/
+
+.chap-2 {
+  > .chap-title, .chap-text-content {
+    background-color: $white;
+  }
+
+  > .chap-numbers {
+    display: flex;
+
+    justify-content: space-between;
+
+    >.chap-number-card {
+      display: flex;
+      flex-direction: column;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      background-color: $white;
+
+      > .chap-number-number {
+        height: $chap-number-card-height *2 / 3;
+        font-family: 'Museo 700';
+        font-size: 200px;
+        font-weight: 500;
+        color: $main-color;
+      }
+
+      > .chap-number-description {
+        text-align: center;
+      }
+    }
+  }
+}

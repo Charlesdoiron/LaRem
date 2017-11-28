@@ -1,0 +1,57 @@
+
+/*------- Chapter 5 ------*/
+
+.chap-5 {
+  background-color: $white;
+}
+
+.chap-text-carousel-title {
+  display: flex;
+
+  justify-content: center;
+
+  width: 100vw;
+  color: $middle-grey;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.chap-text-carousel-container {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  &:before {
+    content: '‹';
+    font-size: 7em;
+    font-weight: 100;
+  }
+
+  &:after {
+    content: '›';
+    font-size: 7em;
+    font-weight: 100;
+  }
+}
+
+.chap-text-carousel-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > span {
+    color: $middle-grey;
+    font-size: 4em;
+    font-weight: 500;
+  }
+
+  > p {
+    width: 50%;
+    color: $light-grey;
+    text-align: center;
+  }
+}

@@ -1,0 +1,222 @@
+
+
+/*------- Chapter 6 ------*/
+
+.chap-6 {
+  > .chap-text-content {
+    padding-bottom: $chap-6-pic-height * 2 / 3;
+  }
+}
+
+.chap6-pic-container {
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  height: $chap-6-pic-height;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  background-color: $white;
+
+  > .chap-pic {
+
+    height: $chap-6-pic-height;
+    position: absolute;
+    top: -$chap-6-pic-height / 3;
+
+    background-image: url('https://picsum.photos/1300/280/?random');
+    background-size: cover;
+
+  }
+}
+
+.chap-persons {
+  position: absolute;
+  top: $chap-6-pic-height * 2 / 3 - $chap-6-persons-offset;
+  margin: 0;
+  display: flex;
+
+  justify-content: space-around;
+
+  z-index: 10;
+}
+
+.chap-person-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.chap-person-arrow-top {
+  border-left: $chap-6-persons-arrow solid transparent;
+  border-right: $chap-6-persons-arrow solid transparent;
+  border-bottom: $chap-6-persons-arrow solid $white;
+  width: 0;
+}
+
+.chap-person {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  background-color: $white;
+}
+
+.person-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.person-parameters {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-around;
+}
+
+.person-name {
+  font-weight: 500;
+}
+
+.person-job-title {
+  color: $secondary-color;
+}
+
+.person-picture > img {
+  border-radius: 50%;
+}
+
+.person-description{
+
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  > p {
+    font-size: 0.8rem;
+    padding-right: map-get($spacers, 1);
+    padding-left: map-get($spacers, 1);
+  }
+}
+
+.chap-more-infos-container {
+  background-color: $white;
+
+  > .sub1 {
+    text-align: center;
+  }
+
+  > .sub2 {
+    display: flex;
+    justify-content: space-between;
+
+    > .sub-sub2 {
+      text-align: right;
+
+    }
+  }
+}
+
+.more-infos-sub-sub > a {
+  color: $secondary-color;
+}
+
+.challengers-prez-picture {
+  height: $chap-6-pic-height;
+  background-image: url('https://picsum.photos/1300/280/?random');
+  background-size: cover;
+
+  font-family: 'Museo';
+  text-transform: uppercase;
+  font-size: 1.5em;
+  line-height: 1em;
+
+  padding-right: map-get($spacers, 2);
+  padding-left: map-get($spacers, 2);
+  @media (min-width: map-get($grid-breakpoints, sm)) {
+    padding-right: map-get($spacers, 5);
+    padding-left: map-get($spacers, 5);
+    font-size: 4.5em;
+  }
+}
+
+.challengers-prez-desc {
+  margin-top: -$chap-6-persons-offset;
+  background-color: $white;
+  > p {
+    color: $light-grey;
+  }
+}
+
+.chap-6-challengers {
+  display: flex;
+  justify-content: space-around;
+  //align-items: center;
+  //align-content: center;
+}
+
+.challenger {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: map-get($spacers, 4);
+  height: $chap6-challenger-height;
+  padding: 0;
+  background-color: $white;
+}
+
+.challenger-pic {
+  height: $chap6-challenger-height * 3 / 4;
+  background-image: url('https://picsum.photos/600/300/?random');
+  background-size: cover;
+}
+
+.challenger-headers {
+  display: flex;
+  flex-grow: 1;
+
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.challenger-name {
+  padding-left: map-get($spacers, 3);
+  padding-right: map-get($spacers, 5);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.challenger-location {
+  flex: 1;
+  padding-right: map-get($spacers, 3);
+  text-align: right;
+  padding-left: 0;
+  margin: 0;
+
+  :first-child {
+    display: inline-block;
+    color: $light-grey;
+  }
+
+  :last-child {
+    display: inline-block;
+    padding: 0;
+    text-align: right;
+    font-size: 0.75em;
+    line-height: 1em;
+    text-transform: uppercase;
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+      padding: 0;
+    }
+
+  }
+}

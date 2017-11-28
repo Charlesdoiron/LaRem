@@ -1,0 +1,73 @@
+/*------- Chapter 7 ------*/
+
+
+/*.chap-crazy-pic {
+  padding: 0;
+  margin: 0;
+  height: 100vw;
+  background-image: url('../img/robot-3d.png');
+  background-size: cover;
+}*/
+
+.robot-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+.robot-content {
+    text-align: center;
+    .legend-img {
+        width: 100%;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.robot-img {
+    width: 677px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.robot-circle {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 400px;
+    border-radius: 50%;
+    background-color: $third-color;
+    position: absolute;
+    bottom: -30px;
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    animation-timing-function: ease;
+    animation-name: pulsateArea;
+    animation-duration: 7s;
+
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsateArea {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+100% {
+    transform: scale(0.5);
+}
+}
+
+
+.legend {
+    display: none;
+    p {
+        font-size: 1em;
+    }
+}
