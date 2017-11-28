@@ -3,18 +3,12 @@ const nodeEnv = process.env.NODE_ENV || 'production';
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
-const extractSass = new ExtractTextPlugin({
-    filename: "./src/css/styles.css",
-    disable: process.env.NODE_ENV === "development"
-});
-
-
 module.exports = {
   devtool: 'source-map',
   entry: {
     app: [
     './src/components/app.js',
-    './src/scss/styles.scss'
+    './src/stylus/styles.styl'
     ]
   },
   output: {
@@ -22,22 +16,28 @@ module.exports = {
   },
   module: {
     rules: [
-    {
-      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-      loader: 'url-loader?limit=100000'
-    },
       {
-        test: /\.scss$/,
-        use: extractSass.extract({
-            use: [{
-                loader: "css-loader?url=false"
-            },{
-                loader: "sass-loader"
-            }, {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+            options: {
+                importLoaders: 1,
+            }
+          },
+          {
             loader: 'postcss-loader'
-          }],
-            // use style-loader in development
-            fallback: "style-loader"
+          }
+        ]
+      },
+      {
+        test: /\.styl$/,
+        use: ExtractTextPlugin.extract({
+          use: ["css-loader", "stylus-loader"]
         })
       }
     ],
@@ -64,15 +64,9 @@ module.exports = {
     //   'process.env': { NODE_ENV: JSON.stringify(nodeEnv)}
     // }),
     //browser-sync
-    extractSass,
+    new ExtractTextPlugin('./src/css/styles.css'),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery',
-      Popper: ['popper.js', 'default']
     }),
     // new StaticSiteGeneratorPlugin('main', data.routes, data),
     new BrowserSyncPlugin({

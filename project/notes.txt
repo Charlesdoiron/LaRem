@@ -1,1 +1,9 @@
-Polices : Lato Museo
+Autoprefixer
+Critical: pas encore pigé tout
+Purify: remove unuse CSS
+ImageMin: compress images
+UglifyJS: minify the JS code
+Babel: from >ES6 to ES5
+CSSNext ?
+BrowserSync
+Sourcemaps
