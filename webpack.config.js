@@ -3,12 +3,17 @@ const nodeEnv = process.env.NODE_ENV || 'production';
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
+const extractSass = new ExtractTextPlugin({
+    filename: "./src/css/styles.css",
+    disable: process.env.NODE_ENV === "development"
+});
+
 module.exports = {
   devtool: 'source-map',
   entry: {
     app: [
     './src/components/app.js',
-    './src/stylus/styles.styl'
+    './src/stylus/styles.scss'
     ]
   },
   output: {
@@ -16,28 +21,22 @@ module.exports = {
   },
   module: {
     rules: [
+    {
+      test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+      loader: 'url-loader?limit=100000'
+    },
       {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-            options: {
-                importLoaders: 1,
-            }
-          },
-          {
+        test: /\.scss$/,
+        use: extractSass.extract({
+            use: [{
+                loader: "css-loader?url=false"
+            },{
+                loader: "sass-loader"
+            }, {
             loader: 'postcss-loader'
-          }
-        ]
-      },
-      {
-        test: /\.styl$/,
-        use: ExtractTextPlugin.extract({
-          use: ["css-loader", "stylus-loader"]
+          }],
+            // use style-loader in development
+            fallback: "style-loader"
         })
       }
     ],

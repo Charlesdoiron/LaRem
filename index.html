@@ -1,16 +1,231 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="./src/css/styles.css">
-  <title></title>
-</head>
-<body>
-	  <div class="wrapper">
 
-    <h1>Object Fit!<br>↓</h1>
-    <video src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28831/Typer.mp4" autoplay loop></video>
-  </div>
-  <script src="./_build/bundle.js"></script>
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <title>La République en Marche </title>
+</head>
+<!--                                                                                                           
+                                                                                                          
+BBBBBBBBBBBBBBBBB    iiii                                                                                 
+B::::::::::::::::B  i::::i                                                                                
+B::::::BBBBBB:::::B  iiii                                                                                 
+BB:::::B     B:::::B                                                                                      
+  B::::B     B:::::iiiiiinnnn  nnnnnnnn      ooooooooooo     mmmmmmm    mmmmmmm      eeeeeeeeeeee         
+  B::::B     B:::::i:::::n:::nn::::::::nn  oo:::::::::::oo mm:::::::m  m:::::::mm  ee::::::::::::ee       
+  B::::BBBBBB:::::B i::::n::::::::::::::nno:::::::::::::::m::::::::::mm::::::::::me::::::eeeee:::::ee     
+  B:::::::::::::BB  i::::nn:::::::::::::::o:::::ooooo:::::m::::::::::::::::::::::e::::::e     e:::::e     
+  B::::BBBBBB:::::B i::::i n:::::nnnn:::::o::::o     o::::m:::::mmm::::::mmm:::::e:::::::eeeee::::::e     
+  B::::B     B:::::Bi::::i n::::n    n::::o::::o     o::::m::::m   m::::m   m::::e:::::::::::::::::e      
+  B::::B     B:::::Bi::::i n::::n    n::::o::::o     o::::m::::m   m::::m   m::::e::::::eeeeeeeeeee       
+  B::::B     B:::::Bi::::i n::::n    n::::o::::o     o::::m::::m   m::::m   m::::e:::::::e                
+BB:::::BBBBBB::::::i::::::in::::n    n::::o:::::ooooo:::::m::::m   m::::m   m::::e::::::::e               
+B:::::::::::::::::Bi::::::in::::n    n::::o:::::::::::::::m::::m   m::::m   m::::me::::::::eeeeeeee       
+B::::::::::::::::B i::::::in::::n    n::::noo:::::::::::oom::::m   m::::m   m::::m ee:::::::::::::e       
+BBBBBBBBBBBBBBBBB  iiiiiiiinnnnnn    nnnnnn  ooooooooooo  mmmmmm   mmmmmm   mmmmmm   eeeeeeeeeeeeee  / Charles d'Oiron     
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                          
+                                                                                                           -->
+<body>
+
+	<!-- NAV -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">EM !</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Actualités <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Campus</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Evenements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Comités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Projets citoyens</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#">Devenir adhérent(e)</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-menu my-2 my-sm-0" type="submit">Démarrer un projet</button>
+            </form>
+        </div>
+    </nav>
+    <!-- END OF NAV -->
+    <!-- HERO -->
+    <div class="hero row">
+        <div class="col-md-6">
+            <div class="title">
+                <h1>Démarrez votre projet</h1>
+                <h2>ou rejoignez les <span id="count1"></span> citoyens engagés <br>
+						dans les <span id="count2"></span> projets déjà lancés
+                		</h2>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="./src/img/hero@2x.png" class="hero__img" alt="La Republique en Marche">
+        </div>
+    </div>
+    <!-- END OF HERO -->
+    <!-- SEARCH BAR -->
+    <div class="search row">
+        <div class="col-md-12">
+            <div class="input-group ">
+                <div class="col-md-8 col-sm-12 px-0">
+                    <input type="text" class="form-control col-md-12 " aria-label="Text input with dropdown button" placeholder=" Recherchez les projets citoyens par thèmes ou compétences recherchées ">
+                </div>
+                <div class=" select ">
+                    <label>Dans un rayon de</label>
+                    <div class="dropdown">
+                        <p class="" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">50 Km</p>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">100 Km</a>
+                            <a class="dropdown-item" href="#">200 Km</a>
+                            <a class="dropdown-item" href="#">300 Km</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="local_input">
+                    <label>Autour de</label>
+                    <input type="text" class=" col-md-12 " aria-label="Text input with dropdown button" placeholder="Paris">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF SEARCH BAR -->
+    <!-- CARDS -->
+    <div class="cards row">
+        <div class="card">
+            <div class="card_1 card__thumb ">
+            </div>
+            <div class="card__desc pb-0">
+                <h4>Un stage pour tous</h4>
+                <p>Aider les collégiens à trouver un stage même sans réseau.</p>
+            </div>
+            <div class="card__author pt-1">
+                <div class="thumb__sm"></div>
+                <p>Par <span>Guillaume D</span></p>
+            </div>
+            <div class="card__tags pt-0">
+                <p class="my-0">Nous recherchons :</p>
+                <span class="tag">
+    				Toutes les bonnes volontés
+    			</span>
+                <span class="tag">
+    				Expert droits d'asile
+    			</span>
+                <span class="tag">
+    				Expert culture
+    			</span>
+                <span class="tag">
+    				Expert intercultuarités
+    			</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_2 card__thumb "></div>
+            <div class="card__desc pb-0">
+                <h4>Le savoir Médecin</h4>
+                <p>Des événements culturels pour égayer le quotidien des patients hospitalisés.</p>
+            </div>
+            <div class="card__author pt-1">
+                <div class="thumb__sm"></div>
+                <p>Par <span>Sylvain F</span></p>
+            </div>
+            <div class="card__tags pt-0">
+                <p class="my-0">Nous recherchons :</p>
+                <span class="tag">
+    				Toutes les bonnes volontés
+    			</span>
+                <span class="tag">
+    				Expert droits d'asile
+    			</span>
+                <span class="tag">
+    				Expert culture
+    			</span>
+                <span class="tag">
+    				Expert intercultuarités
+    			</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card_3 card__thumb ">
+            </div>
+            <div class="card__desc ">
+                <h4>Opération zéro mégot</h4>
+                <p>Nettoyage des plages de Palavas ce dimanche 29 octobre !</p>
+            </div>
+            <div class="card__author pt-1">
+                <div class="thumb__sm"></div>
+                <p>Par <span>Sergeï T</span></p>
+            </div>
+            <div class="card__tags pt-0">
+                <p class="my-0">Nous recherchons :</p>
+                <span class="tag">
+    				Toutes les bonnes volontés
+    			</span>
+                <span class="tag">
+    				Expert droits d'asile
+    			</span>
+                <span class="tag">
+    				Expert culture
+    			</span>
+                <span class="tag">
+    				Expert intercultuarités
+    			</span>
+            </div>
+        </div>
+    </div>
+    <!-- END OF CARDS -->
+    <!-- CTA -->
+    <div class="cta row">
+        <button class="btn ">Tous les projets</button>
+    </div>
+    <!-- END OF CTA -->
+    <!-- SLOGAN -->
+    <div class="slogan row">
+        <h3>
+    		Les projets citoyens sont des actions locales qui visent à améliorer concrètement notre quotidien en réunissant la force et les compétences de toutes et tous. 
+    	</h3>
+    </div>
+    <!-- END OF SLOGAN -->
+    <!-- FORM -->
+    <div class="formulaire row ">
+        <img src="./src/img/search.png" class="picto_search">
+        <h3>
+			Envie d'agir autrement près de chez vous ?<br>
+Lancez votre projet local !
+		</h3>
+        <form class="form-inline col-md-12">
+            <div class="form-group ">
+                <label for="" class="sr-only"></label>
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Le titre court et descriptif de mon projet">
+            </div>
+            <button type="submit" class="btn ">Prochaine étape <i class="fa fa-arrow-right fa-lg ml-2" aria-hidden="true"></i></button>
+        </form>
+    </div>
+    <!-- END OF FORM -->
+    <script src="./_build/bundle.js"></script>
 </body>
+
 </html>
